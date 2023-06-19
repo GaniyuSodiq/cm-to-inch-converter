@@ -12,9 +12,10 @@
     <h1>Shopping Cart</h1>
     
     <button id="apple" onclick="apple()">Apple</button>
-    <button id="tomatoe">Tomatoe</button>
-    <button id="egg">Egg</button>
-    <button id="clear">Clear</button>
+    <button id="tomatoe" onclick="tomatoe()">Tomatoe</button>
+    <button id="egg" onclick="egg()">Egg</button>
+    <button id="clear" onclick="deleteDiv()">Clear</button>
+
     <div id="cart">
         
     </div>
@@ -26,6 +27,19 @@
             let appleDiv = document.createElement('div');
             appleDiv.innerText = 'Apple';
             document.getElementById('cart').appendChild(appleDiv);
+        }
+        function tomatoe(){
+            let tomatoeDiv = document.createElement('div');
+            tomatoeDiv.innerText = 'Tomatoe';
+            document.getElementById('cart').appendChild(tomatoeDiv);
+        }
+        function egg(){
+            let eggDiv = document.createElement('div');
+            eggDiv.innerText = 'Egg';
+            document.getElementById('cart').appendChild(eggDiv);
+        }
+        function deleteDiv(){
+            document.getElementById('cart').innerText = '';
         }
     </script>
 </body>
