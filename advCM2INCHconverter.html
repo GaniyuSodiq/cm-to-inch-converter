@@ -7,6 +7,30 @@
     <title>CM to INCH Converter</title>
 </head>
 <body>
-    
+    <h1>CM to INCH Converter</h1>
+    <input type="text" id="input_id" placeholder="what's the number to conver?" /> <br> <br>
+    <button onclick="tocm()">CONVERT TO CM</button>
+    <button onclick="toinch()">CONVERT TO INCH</button>  <br> <br>
+    <div id="result"></div>
+
+    <script>
+
+        function tocm(){
+            let inputB = document.getElementById("input_id").value;
+            let cm = inputB * 2.54;
+            let resultDiv = document.createElement('h3');
+            resultDiv.innerText = "The result of " + inputB + " to CM is " + cm + " CM";
+            document.getElementById('result').appendChild(resultDiv);
+        }
+
+        function toinch(){
+            let inputB = document.getElementById("input_id").value;
+            let inches = inputB / 2.54;
+            let resultDiv = document.createElement('h3');
+            resultDiv.innerText = "The result of " + inputB + " to INCHES is " + inches + " INCHES";
+            document.getElementById('result').appendChild(resultDiv);
+        }
+
+    </script>
 </body>
 </html>
